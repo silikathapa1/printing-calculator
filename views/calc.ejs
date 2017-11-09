@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Printing Calculator</title>
+</head>
+<body>
+  <div>
+    <form action="/" method="post">
+         <p>
+            <label for="expr">Expression:</label>
+            <input type="text" id="expr" name="expr" placeholder="Enter Mathematical Expression" autofocus />
+            <br />
+            <input type="submit" value="Solve"/>
+         </p>
+      </form>
+      <form action="/clear/" method="get">
+         <p>
+            <input type="submit" value="Clear"/>
+         </p>
+      </form>
+  </div>
+
+  <div>
+    <ol>
+        <% exprList.forEach(function(expr, index) { %>
+            <li><%= expr %></li>
+        <% }); %>
+    </ol>
+  </div>
+</body>
+</html>
